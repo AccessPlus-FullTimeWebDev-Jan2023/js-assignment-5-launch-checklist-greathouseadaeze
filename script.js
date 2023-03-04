@@ -13,19 +13,27 @@ window.addEventListener("load", function() {
        // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
    })
 
-   let rLaunchForm = document.querySelector("form")
-   let list= document.querySelector("faultyItems")
-   list.style.visibility = "hidden"
-   form.addEventListener("submit", function() {
-let iPilot = document.querySelector("input[name = pilotName]")
-let pilot = iPilot.value;
-let iCopilot = document.querySelector("input[name = copilotName]")
-let copilot = iCopilot.value;
-let iFuelLevel = document.querySelector("input[name = fuelLevel]")
-let fuelLevel = Number(iFuelLevel.value);
-let iCargoLevel = document.querySelector("input[name = cargoMass]")
-let cargoLevel = Number(iCargoLevel.value);
-    formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)   
+   let form = document.querySelector("form");
+   let list= document.getElementById("faultyItems");
+   list.style.visibility = "hidden";
+   
+   
+   form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let iPilot = document.querySelector("input[name=pilotName]");
+    let pilot = iPilot.value;
+
+    let iCopilot = document.querySelector("input[name=copilotName]");
+    let copilot = iCopilot.value;
+
+    let iFuelLevel = document.querySelector("input[name=fuelLevel]");
+    let fuelLevel = Number(iFuelLevel.value);
+
+    let iCargoLevel = document.querySelector("input[name=cargoMass]");
+    let cargoLevel = Number(iCargoLevel.value);
+
+    formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
    });
    
 });
