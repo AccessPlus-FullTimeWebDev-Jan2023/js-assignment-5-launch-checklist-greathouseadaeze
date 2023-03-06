@@ -28,7 +28,6 @@ function validateInput(testInput) {
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-    console.log("adaeze")
    let rPilot= document.getElementById("pilotStatus")
    let rCopilot= document.getElementById("copilotStatus")
    let rFuelLevel = document.getElementById("fuelStatus")
