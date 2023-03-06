@@ -23,7 +23,7 @@ function validateInput(testInput) {
     } else if (!isNaN(testInput)){
         return "Is a Number"
     } else {
-        return "Not a number"
+        return "Not a Number"
     }
 }
 
@@ -36,7 +36,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    let rLaunchStatus = document.getElementById("launchStatus")
    if(validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
     alert("All fields are required!");
-    }else if(validateInput(pilot) !== "Not a number" || validateInput(copilot) !== "Not a number" || validateInput(fuelLevel) === "Not a number" || validateInput(cargoLevel) === "Not a number") {
+    }else if(validateInput(pilot) !== "Not a Number" || validateInput(copilot) !== "Not a Number" || validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
         alert("Make sure to enter valid information for each field!")
     } else {
             list.style.visibility = "visible"
@@ -60,7 +60,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             } else {
                 rFuelLevel.innerHTML = "Fuel level high enough for launch"
                 rCargoFuel.innerHTML = "Cargo mass low enough for launch"
-                rLaunchStatus.innerHTML = "Shuttle Ready for Launch"
+                rLaunchStatus.innerHTML = "Shuttle is Ready for Launch"
                 rLaunchStatus.style.color = "#419F6A"
             }
         }  
